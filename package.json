@@ -18,7 +18,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "prestart": "knex migrate:latest"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
