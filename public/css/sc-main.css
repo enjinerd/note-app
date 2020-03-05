@@ -1,0 +1,26 @@
+.sc-overlay {
+  display: none;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sc-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.3em;
+  padding: 2em 1em 1em;
+  display: none;
+  width: 350px;
+  font-size: 14px;
+}
+
+.sc-message-box {
+  min-height: 5em;
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+<section class="form-edit">
+  <h2>Edit Note</h2>
+  <form action="/notes/<%=note.id%>/edit?_method=put" method="post">
+    <fieldset class="form-group form-success">
+      <label for="title">TITLE:</label>
+      <input
+        id="title"
+        type="text"
+        placeholder=""
+        class="form-control"
+        name="title"
+        value="<%=note.title%>"
+      />
+    </fieldset>
+    <fieldset class="form-group form-textarea">
+      <label for="message">BODY:</label>
+      <textarea id="body" name="body" rows="8" class="form-control">
+        <%=note.body%></textarea
+      >
+    </fieldset>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-info ">Update</button>
+    </div>
+  </form>
+</section>
