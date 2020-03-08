@@ -1,10 +1,7 @@
-// depencies
-const { Router } = require('express');
+const router = require('express').Router();
 const userController = require('../controllers/user');
 
-const router = new Router();
-
-// route url
+// routing url
 
 //GET
 router.get('/register', userController.register);
