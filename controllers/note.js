@@ -10,6 +10,7 @@ async function add(req, res) {
 }
 
 async function edit(req, res) {
+  console.log(req.cookies.master);
   const note = await Note.get(req.params.id);
   res.render('notes/edit', { note: note });
 }
