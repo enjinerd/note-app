@@ -5,6 +5,7 @@
   "author": "roon",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^4.0.1",
     "body-parser": "^1.19.0",
     "date-fns": "^2.10.0",
     "dialogs": "^2.0.1",
