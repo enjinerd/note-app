@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const router = require('./routes/router');
 const methodOverride = require('method-override');
 const errorRouter = require('./routes/error');
+const userRouter = require('./routes/user');
 
 // use Static Files on public folder
 app.use(express.static('public'));
@@ -23,6 +24,7 @@ app.use(layouts);
 
 // Setup Router for routing URL
 app.use(router);
+app.use('/users/', userRouter);
 app.use(errorRouter);
 
 //export app

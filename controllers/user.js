@@ -5,6 +5,10 @@ function register(req, res) {
   res.render('users/register');
 }
 
+function login(req, res) {
+  res.render('users/login')
+}
+
 async function add(req, res) {
   // TODO: Validate data
   const { email, password } = req.body;
@@ -19,7 +23,20 @@ async function add(req, res) {
  res.redirect('/');
 }
 
+async function process_login(req, res) {
+  const match = await User.login(req.body.email, req.body.password);
+  if (match === true) {
+    console.log('login sukses');
+    res.redirect('/');
+  } else {
+    console.log('login gagal');
+    res.redirect('/');
+  }
+}
+
 module.exports = {
  register: register,
- add: add
+ add: add,
+ login: login,
+ process_login: process_login
 };
