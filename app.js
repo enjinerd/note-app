@@ -1,3 +1,4 @@
+// depencies
 const express = require('express');
 const app = express();
 const layouts = require('express-ejs-layouts');
@@ -6,13 +7,13 @@ const router = require('./routes/router');
 const methodOverride = require('method-override');
 const errorRouter = require('./routes/error');
 
-// Use Static Files on public folder
+// use Static Files on public folder
 app.use(express.static('public'));
 
-// menggunakan body parser untuk form
+// use body parser for extract form
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// menggunakan method
+// use method
 app.use(methodOverride('_method'));
 
 
