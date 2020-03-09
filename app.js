@@ -41,6 +41,9 @@ app.use(
 // cookie
 app.use(require('cookie-parser')(COOKIE_SECRET));
 
+// flash message
+app.use(require('./middlewares/flash'));
+
 // Setup Views with ejs
 app.set('view engine', 'ejs');
 app.use(layouts);
