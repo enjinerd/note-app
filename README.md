@@ -15,6 +15,10 @@ This project build for practice my course on **ExpressJS**
 
 https://express-notes-roon.herokuapp.com/
 
+**email** : demo@demo
+
+**password** : demo
+
 ## Screenshot
 
 **Homepage**
