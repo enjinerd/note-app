@@ -18,15 +18,17 @@ async function add(req, res) {
     password
   };
  // Add to user table
- await User.add(user);
- // Loged in user
+ const newUser = await User.add(user);
+ // Logged in user
+ req.session.userId = newUser[0];
  res.redirect('/');
 }
 
 async function process_login(req, res) {
   const match = await User.login(req.body.email, req.body.password);
-  if (match === true) {
+  if (match) {
     console.log('login sukses');
+    req.session.userId = match.id;
     res.redirect('/');
   } else {
     console.log('login gagal');
@@ -34,9 +36,16 @@ async function process_login(req, res) {
   }
 }
 
+function process_logout(req, res) {
+  req.session.destroy();
+  res.redirect('/');
+}
+
+
 module.exports = {
  register: register,
  add: add,
  login: login,
- process_login: process_login
+ process_login: process_login,
+ process_logout: process_logout
 };
