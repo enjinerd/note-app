@@ -11,7 +11,7 @@
     "date-fns": "^2.10.0",
     "dialogs": "^2.0.1",
     "ejs": "^3.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-ejs-layouts": "^2.5.0",
     "express-session": "^1.17.0",
     "knex": "^0.20.10",
